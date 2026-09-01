@@ -1,0 +1,30 @@
+# 自动统一换行
+*               text=auto eol=lf
+
+# 显式二进制
+*.png           binary
+*.jpg           binary
+*.jpeg          binary
+*.gif           binary
+*.ico           binary
+*.icns          binary
+*.webp          binary
+*.woff          binary
+*.woff2         binary
+*.ttf           binary
+*.otf           binary
+*.eot           binary
+*.mp4           binary
+*.webm          binary
+*.zip           binary
+*.gz            binary
+*.7z            binary
+*.pdf           binary
+*.docx          binary
+*.xlsx          binary
+*.pptx          binary
+
+# Windows 脚本保留 CRLF
+*.bat           text eol=crlf
+*.cmd           text eol=crlf
+*.ps1           text eol=crlf
