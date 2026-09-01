@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GitPusher · GitHub 项目快传与在线编辑</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <!-- 顶部栏 -->
+  <header class="topbar" id="topbar" hidden>
+    <div class="brand">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/>
+      </svg>
+      <span class="brand-name">GitPusher</span>
+      <span class="brand-sub">GitHub 项目快传 · 在线编辑</span>
+    </div>
+    <div class="topbar-right">
+      <span class="rate" id="rate-info"></span>
+      <div class="user" id="user-chip"></div>
+      <button class="btn btn-ghost btn-sm" id="btn-settings" title="设置">⚙</button>
+      <button class="btn btn-ghost btn-sm" id="btn-logout">退出</button>
+    </div>
+  </header>
+
+  <!-- 登录视图 -->
+  <section class="auth-view" id="view-auth" hidden>
+    <div class="auth-card">
+      <div class="auth-logo">
+        <svg viewBox="0 0 24 24" width="40" height="40" aria-hidden="true">
+          <path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/>
+        </svg>
+      </div>
+      <h1 class="auth-title">连接你的 GitHub 账号</h1>
+      <p class="auth-desc">使用 Personal Access Token 授权，Token 仅保存在本机浏览器，不会上传到任何服务器。</p>
+
+      <div class="form-item">
+        <label for="token-input">GitHub Token</label>
+        <div class="input-group">
+          <input id="token-input" class="input" type="password" placeholder="ghp_xxx… 或 github_pat_xxx…" autocomplete="off" spellcheck="false" />
+          <button class="btn btn-ghost btn-sm" id="btn-toggle-token" type="button">显示</button>
+        </div>
+      </div>
+
+      <div class="alert alert-warn" id="auth-error" hidden></div>
+
+      <button class="btn btn-primary btn-block" id="btn-login">连接 GitHub</button>
+
+      <div class="auth-help">
+        <details>
+          <summary>如何获取 Token？需要哪些权限？</summary>
+          <ol>
+            <li>打开 <a href="https://github.com/settings/tokens" target="_blank" rel="noopener">GitHub → Settings → Developer settings → Personal access tokens</a></li>
+            <li><b>Fine-grained token</b>（推荐）：Repository permissions 勾选 <code>Contents: Read and write</code>、<code>Metadata: Read-only</code>、<code>Administration: Read and write</code>（用于新建仓库）；Account permissions 勾选 <code>Administration: Read and write</code>（用于新建仓库）。</li>
+            <li><b>Classic token</b>：勾选 <code>repo</code>（完整仓库读写，含私有库）与 <code>workflow</code>（如需修改 GitHub Actions 文件）。</li>
+          </ol>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主视图 -->
+  <main class="main-view" id="view-main" hidden>
+    <aside class="sidebar">
+      <div class="sidebar-head">
+        <div class="search-box">
+          <input id="repo-search" class="input input-sm" placeholder="搜索仓库…" autocomplete="off" />
+        </div>
+        <div class="sidebar-actions">
+          <button class="btn btn-primary btn-sm" id="btn-new-repo">+ 新建</button>
+          <button class="btn btn-ghost btn-sm" id="btn-refresh" title="刷新仓库列表">↻</button>
+        </div>
+      </div>
+      <div class="repo-list" id="repo-list"></div>
+      <div class="sidebar-foot" id="sidebar-foot"></div>
+    </aside>
+
+    <section class="content">
+      <div class="repo-header" id="repo-header"></div>
+      <div class="meta-bar">
+        <div class="repo-stat" id="repo-stat"></div>
+        <div class="branch-bar" id="branch-bar"></div>
+      </div>
+      <nav class="tabs" id="tabs">
+        <button class="tab active" data-view="upload">⬆ 上传项目</button>
+        <button class="tab" data-view="explore">🌳 文件浏览</button>
+        <button class="tab" data-view="edit">✎ 在线编辑</button>
+        <button class="tab" data-view="history">📜 提交历史</button>
+      </nav>
+      <div class="view-area">
+        <div class="panel" id="panel-upload"></div>
+        <div class="panel" id="panel-explore" hidden></div>
+        <div class="panel" id="panel-edit" hidden></div>
+        <div class="panel" id="panel-history" hidden></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal-root"></div>
+
+  <script src="js/util.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/upload.js"></script>
+  <script src="js/explore.js"></script>
+  <script src="js/edit.js"></script>
+  <script src="js/history.js"></script>
+  <script src="js/settings.js"></script>
+</body>
+</html>

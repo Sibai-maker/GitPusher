@@ -1,0 +1,54 @@
+# ---------- 依赖 ----------
+node_modules/
+**/node_modules/
+
+# ---------- 构建产物 ----------
+dist/
+**/dist/
+out/
+**/out/
+
+# electron-app 的 app/ 是 sync 脚本生成的快照，不进版本库
+electron-app/app/
+# electron-builder 调试日志
+electron-app/builder-debug.yml
+# 本地打包产物（体积大，不进版本库）：NSIS 安装器、免安装目录、损坏备份
+electron-app/dist/
+electron-app/release/
+electron-app/win-unpacked/
+electron-app/dist-broken-bak/
+# 构建 / 诊断临时文件
+electron-app/_build*.log
+electron-app/_lockdiag.txt
+electron-app/_*.txt
+
+# ---------- 环境与凭证 ----------
+.env
+.env.local
+.env.*.local
+*.pem
+
+# ---------- 日志 / 临时 ----------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.cache/
+
+# ---------- 编辑器 / IDE ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+
+# ---------- 系统文件 ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# ---------- WorkBuddy 工作区元数据 ----------
+.workbuddy/

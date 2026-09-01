@@ -1,0 +1,57 @@
+{
+  "name": "gitpusher",
+  "version": "1.0.0",
+  "description": "纯前端 GitHub 管理工具：上传本地项目、在线浏览/编辑/重命名/删除、查看提交历史",
+  "main": "main.js",
+  "author": {
+    "name": "Sibai",
+    "url": "https://github.com/gitpusher"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/gitpusher/gitpusher#readme",
+  "bugs": {
+    "url": "https://github.com/gitpusher/gitpusher/issues"
+  },
+  "scripts": {
+    "sync": "node scripts/sync-app.js",
+    "synccheck": "node scripts/sync-app.js --check",
+    "prestart": "node scripts/sync-app.js",
+    "prepack": "node scripts/sync-app.js",
+    "predist": "node scripts/sync-app.js",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.gitpusher.app",
+    "productName": "GitPusher",
+    "copyright": "Copyright © 2026 GitPusher",
+    "icon": "build/icon.ico",
+    "files": [
+      "main.js",
+      "app/**/*"
+    ],
+    "directories": {
+      "buildResources": "build",
+      "output": "C:/Users/四白/AppData/Local/Temp/gitpusher-dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico",
+      "publisherName": "Sibai",
+      "artifactName": "GitPusher-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "GitPusher"
+    }
+  }
+}
