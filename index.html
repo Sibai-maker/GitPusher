@@ -1,112 +1,282 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GitPusher · GitHub 项目快传与在线编辑</title>
-  <link rel="stylesheet" href="assets/style.css" />
+<html lang="zh-CN" data-theme="light" data-page-node-id="QtWMmbrVQbJvvTR4WcjCx2">
+<head data-page-node-id="hE16OLOCtDiXoBKIWEkCJq">
+<meta charset="UTF-8" data-page-node-id="rxGVpBMZTBNCAkmbis54rY" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" data-page-node-id="CaHcAj6h1LObdzlfxralbP" />
+<title>党史100题 · 智能刷题</title>
+<meta name="description" content="党史 100 题智能刷题：顺序练习、随机练习、错题重练、答题卡与学习统计。" data-page-node-id="ar8LH5nAio1RWchRVTVBJT" />
+<meta name="theme-color" content="#a3231f" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="党史刷题" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="apple-touch-icon" href="assets/icon-180.png" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23a3231f'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='%23f4e3b8' font-family='serif'%3E%E5%85%9A%3C/text%3E%3C/svg%3E" data-page-node-id="pXxb3IGXHGnnOfrpQErqTz" />
+<link rel="stylesheet" href="assets/css/style.css" data-page-node-id="krtAOyPYZV1OfLDQvQI0bx" />
 </head>
-<body>
-  <!-- 顶部栏 -->
-  <header class="topbar" id="topbar" hidden>
-    <div class="brand">
-      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-        <path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/>
-      </svg>
-      <span class="brand-name">GitPusher</span>
-      <span class="brand-sub">GitHub 项目快传 · 在线编辑</span>
+<body data-page-node-id="Qulu02v5atlIpWNWdlxarv">
+<div class="grain" aria-hidden="true" data-page-node-id="vMQsEXYwW1koo81Uoxh5WF"></div>
+
+<div class="app" data-page-node-id="wzrUhDb0yhFlgELFfWLyaB">
+  <!-- ============ 左侧栏 ============ -->
+  <aside class="rail" data-page-node-id="3GxgQdLV68WgFiaEFjds35">
+    <div class="brand" data-page-node-id="VRGwLBLEuGPHOHPvAoZJ4B">
+      <div class="seal" data-page-node-id="iG9BGnrk5btC0LrXFIIM2D">党</div>
+      <div class="brand-txt" data-page-node-id="BaN2dXXl7olemZ2HQ9MDGV">
+        <h1 data-page-node-id="6zW7T1OqN4Vj7LV3iWCjqP">党史100题</h1>
+        <p data-page-node-id="wlXESnUOL0EborItp8qvDQ">智能刷题 · 发展对象备考</p>
+      </div>
     </div>
-    <div class="topbar-right">
-      <span class="rate" id="rate-info"></span>
-      <div class="user" id="user-chip"></div>
-      <button class="btn btn-ghost btn-sm" id="btn-settings" title="设置">⚙</button>
-      <button class="btn btn-ghost btn-sm" id="btn-logout">退出</button>
+
+    <nav class="mods" aria-label="模块导航" data-page-node-id="BUc5xY1HptqB824whynk0h">
+      <button class="mod is-active" data-mod="choice" data-page-node-id="0SfKfhsuxNwoqwHOVtUfVG">
+        <span class="mod-ico" data-page-node-id="w3z5JNREbZWlUImVxvnXRa">选</span>
+        <span class="mod-name" data-page-node-id="JEFw4WlFlYQrQC89SgHXAi">选择题</span>
+        <span class="mod-badge" data-page-node-id="1VVNI8BeR4KHtkv29651lM">100</span>
+      </button>
+      <button class="mod" data-mod="judge" data-page-node-id="BVsJF3nQ4sl5rNfQb7f9l0">
+        <span class="mod-ico" data-page-node-id="w6TF2LIAQZP3jodphqB3ms">判</span>
+        <span class="mod-name" data-page-node-id="K829BKLD0PBSkew5XzdX03">判断题</span>
+        <span class="mod-badge" data-page-node-id="sAnrHe3D9cdKA7Be9Lr8ou">60</span>
+      </button>
+      <button class="mod" data-mod="short" data-page-node-id="3qvyrQSn6RkHkRyZkgZlAs">
+        <span class="mod-ico" data-page-node-id="pqRMHyBCAT0KJ5yJtVLbZQ">简</span>
+        <span class="mod-name" data-page-node-id="Y93jyVAByZiYnFRd8If5aN">简答题</span>
+        <span class="mod-badge" data-page-node-id="HRg36z71J0RNz5uoLdvkhL">32</span>
+      </button>
+      <button class="mod" data-mod="current" data-page-node-id="99YqqldeGNB2mcLU3sWniU">
+        <span class="mod-ico" data-page-node-id="zYS9G4LaWiKLrdg1L0Q2Gk">时</span>
+        <span class="mod-name" data-page-node-id="oFg1s2NB28eXlFwuRn0lcN">时政专题</span>
+        <span class="mod-badge" data-page-node-id="Wj5VXa8Ntpg3kCGOTSSluk">50</span>
+      </button>
+      <button class="mod" data-mod="exam" data-page-node-id="wMeerfu1qO2b9tEoo5agXb">
+        <span class="mod-ico" data-page-node-id="FnyCrYjQbwDu01uX9mebMQ">考</span>
+        <span class="mod-name" data-page-node-id="8E5JfM94uZBnxZhGBJpG9G">模拟考试</span>
+        <span class="mod-badge" data-page-node-id="CkSdXYt5kC4qNJf1HbhaP7">44</span>
+      </button>
+    </nav>
+
+    <div class="progress-panel" data-page-node-id="AB8oD9A7yZRooaKr8BWbqr">
+      <div class="prog-cap" id="prog-cap" data-page-node-id="progcap01">选择题 · 100 题</div>
+      <div class="ring" id="ring" style="--p:0" data-page-node-id="n0JvvPCmqaLZvLuFQFHe1Y">
+        <div class="ring-in" data-page-node-id="I9CoB4TJ4xJUrViAMskl3J">
+          <b id="ring-num" data-page-node-id="IPUh1wNbEd2iMQeZAti5GK">0<span data-page-node-id="TFgsFgZH6CO7LNQexlbAFi">%</span></b>
+          <em data-page-node-id="XFg3bkmhquCijzfIjq4Mtt">完成度</em>
+        </div>
+      </div>
+      <div class="mini-stats" id="mini-stats" data-page-node-id="BoCEMB9Wvn6Rkit6FLJf3w">
+        <div data-page-node-id="2NugbFlJ5jbYOMihsTNvSF"><i class="dot ok" data-page-node-id="VGk9nkUTi8NkI05fNduLjK"></i><span id="st-label-1" data-page-node-id="yjFuKOBLmHP8ozVsyBARQH">答对</span><b id="st-correct" data-page-node-id="RNDqlhF6o8JWtxDGy1vlvB">0</b></div>
+        <div data-page-node-id="sy00mh5lBbw0RzqBZHfwHH"><i class="dot no" data-page-node-id="4G9Crz26l06lwMOB7XEoBI"></i><span id="st-label-2" data-page-node-id="03PCKmZtADk3SCbHdzSO13">答错</span><b id="st-wrong" data-page-node-id="FUhH6HIwTKSzrlOiAoWGIv">0</b></div>
+        <div data-page-node-id="pcljkl2LPVcvEvklP3fRgY"><i class="dot idle" data-page-node-id="7XcOav49z1YuI2bBTKk9H2"></i><span id="st-label-3" data-page-node-id="TENYF7IG0uvdy6jRLRnANq">未做</span><b id="st-remain" data-page-node-id="APNXQZlmCqTHqJKVPqWjCA">100</b></div>
+      </div>
+    </div>
+
+    <div class="rail-foot" data-page-node-id="rx4pgK65Zv58efYdZcZE8i">
+      <button class="chip-btn" id="btn-theme" title="切换主题" data-page-node-id="YknDBqwYTkwipYAJMI0PGj">
+        <span id="theme-label" data-page-node-id="kHKCUsrnaKcOlgoPRsrvsJ">夜间</span>
+      </button>
+      <button class="chip-btn" id="btn-reset" data-page-node-id="fDYW1XGgZNeZPVG8QZ1z9B">重置进度</button>
+    </div>
+  </aside>
+
+  <!-- ============ 主区域 ============ -->
+  <main class="main" data-page-node-id="Jtv3EnxvPQvdCMC8FaWuRU">
+    <header class="topbar" data-page-node-id="PAnHBdH00siRC425LQsi8H">
+      <div class="chapters" id="chapters" role="tablist" aria-label="章节筛选" data-page-node-id="0ifvrFommUfMZ41IYSiRhi"></div>
+      <div class="tools" data-page-node-id="cmzp2SXgfqFBqx9GYmPe3M">
+        <div class="seg" id="mode-seg" role="group" aria-label="出题模式" data-page-node-id="K7ci93uRv7gqpJp3FMKaGB">
+          <button class="seg-btn is-on" data-mode="order" data-page-node-id="GWF2eMpo4tGxYwNXsYQUyK">顺序</button>
+          <button class="seg-btn" data-mode="random" data-page-node-id="c4vUh2Lt78kBXy4bjnAhev">随机</button>
+        </div>
+        <button class="tool-btn" id="btn-sheet" data-page-node-id="lxguc6kioa94J3fVicQDRC">
+          <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" data-page-node-id="93xfzlq2TkgGFaIXHeA497"><path d="M4 4h5v5H4zM11 4h5v5h-5zM4 11h5v5H4zM11 11h5v5h-5z" fill="none" stroke="currentColor" stroke-width="1.4" data-page-node-id="ZK15QgsuL0stx5ERnQfTOC"/></svg>
+          答题卡
+        </button>
+      </div>
+    </header>
+
+    <section class="stage" data-page-node-id="bUAe1r12RY7obe3VFUc3rj">
+      <article class="card" id="card" data-page-node-id="MSp78AsqSP3RWHhcZfJQ25">
+        <div class="card-head" data-page-node-id="eUbqbQLNqjYVcGQyFQMZwD">
+          <div class="head-left" data-page-node-id="KNlMbNmd3PyUpiTDg3fZzi">
+            <span class="qno" data-page-node-id="rGAGFXtcSSNdkfqFGta7h9">第 <b id="q-index" data-page-node-id="sSvlhapDsjPERa72BuGSPg">01</b> 题</span>
+            <span class="tag" id="q-type" data-page-node-id="UxKFSGEvINjPQQJLTx1niS">单选</span>
+            <span class="tag ghost" id="q-chapter" data-page-node-id="CsJOfovM1febo0gCXWlUmH">建党与大革命</span>
+          </div>
+          <button class="star" id="btn-star" aria-pressed="false" title="收藏本题" data-page-node-id="w9PAeUgAnATpeBWVJkAKn7">
+            <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" data-page-node-id="D6ftvVOnPNXGziSUxYedsp"><path d="M10 2.6l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L2.8 7.9l5-.7z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" data-page-node-id="PkcYygpjT6n17n19on1UMs"/></svg>
+            <span data-page-node-id="Tab0QEGcfpeAw4rbctsYxX">收藏</span>
+          </button>
+        </div>
+
+        <h2 class="stem" id="stem" data-page-node-id="cGZWDxOYNUU46Wdguj9PC9"></h2>
+
+        <div class="options" id="options" role="group" aria-label="选项" data-page-node-id="pvF5CvubRigAUd6fZjSxP3"></div>
+
+        <!-- 简答题正文（其他模块隐藏） -->
+        <div class="short-body" id="short-body" hidden>
+          <div class="hint-row">
+            <span class="recall-tip" id="recall-tip">先默背，再对照</span>
+            <button class="hint-toggle" id="btn-hint" type="button">
+              <span class="hint-dot"></span><span id="hint-label">关键词提示</span>
+            </button>
+            <div class="hint-chips" id="hint-chips" hidden></div>
+          </div>
+
+          <div class="answer-box" id="answer-box" hidden>
+            <div class="answer-head">
+              <span class="answer-tag">参考答案</span>
+              <em>按要点记，不必逐字</em>
+            </div>
+            <ol class="answer-points" id="answer-points"></ol>
+            <p class="answer-note" id="answer-note" hidden></p>
+          </div>
+
+          <div class="assess" id="assess" hidden>
+            <span class="assess-label">这道题掌握得如何？</span>
+            <div class="assess-btns" id="assess-btns">
+              <button type="button" data-level="known">记住了</button>
+              <button type="button" data-level="fuzzy">有点模糊</button>
+              <button type="button" data-level="unknown">没记住</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="actions" data-page-node-id="WLk4sIyn8MM8YGVI8o1kGq">
+          <button class="btn ghost sm" id="btn-prev" data-page-node-id="JKKU4tPZkmMn63sEoEvv6e">← 上一题</button>
+          <div class="actions-right" data-page-node-id="QkLpb80TJ1dXksVIZVPyfc">
+            <button class="btn primary" id="btn-submit" hidden data-page-node-id="VB1uNP8ZQ6KSKWTYPdVtH1">确认答案</button>
+            <button class="btn ghost" id="btn-next" data-page-node-id="h4mlohWwNjsjvGKn4A3lEH">下一题 →</button>
+          </div>
+          <span class="kbd-hint" id="kbd-hint" data-page-node-id="5xcliw6tKP0zS82HmUvPCb">A / B / C / D 选择 · Enter 确认 · ← → 翻页</span>
+        </div>
+
+        <div class="analysis" id="analysis" hidden data-page-node-id="BU6SVHppHkhpRsRhX23UC1"></div>
+      </article>
+
+      <div class="empty" id="empty" hidden data-page-node-id="j6DtAEKQ9B5j3fwqFugCQ4">
+        <div class="empty-mark" data-page-node-id="14BcjwXWqWMIwdg121Zll1">✓</div>
+        <h3 data-page-node-id="s6zWQFjftXPduFnLlPSlNQ">错题本是空的</h3>
+        <p data-page-node-id="EgKzc0O1E9xXognJBHLcsI">当前章节还没有答错的题目，继续保持。</p>
+        <button class="btn ghost" id="btn-empty-back" data-page-node-id="3wZ9yLp6SXn4TnCSxHtGZL">回到全部题目</button>
+      </div>
+
+      <div class="scrub" id="scrub" data-page-node-id="2T6Nk11Cdjes9NlAeknktK">
+        <div class="scrub-meta" data-page-node-id="TipD7Zfz039aGuThluTAcV">
+          <span data-page-node-id="iDrWDZL5J6akr0pJqz61rC">本轮进度</span>
+          <b data-page-node-id="G11991nUGcmTO5ZJnrF6Jl"><span id="scrub-pos" data-page-node-id="6GXImsWfl5aya6yXXDXLlV">1</span> / <span id="scrub-total" data-page-node-id="rVnEltDFzqEKLFgWnRhDyd">100</span></b>
+          <span class="scrub-legend" id="scrub-legend" data-page-node-id="BcDN54yeYox16UuuHsEil0"></span>
+        </div>
+        <div class="scrub-bar" data-page-node-id="4tDHFjPfd6fJ1l3sZ2ogEU">
+          <div class="scrub-track" id="scrub-track" role="group" aria-label="本轮题目进度" data-page-node-id="nWx6b2Hnp8WSinQ56nEWd6"></div>
+          <span class="playhead" id="scrub-head" aria-hidden="true" data-page-node-id="aGIYdVva0qfcbbo4iDj4YQ"></span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot" data-page-node-id="SP6uagIzX3jtBh2IkjYjpC">
+      <span data-page-node-id="Tf7reXRjEIzBcaDp8FivZK">题库来源：人民日报《党史100题》·《中国共产党章程》· 光明网时政专题 · 人民网党建资料库</span>
+      <span class="sep" data-page-node-id="bMKseZezYa0jRRwyQaebmR">|</span>
+      <span data-page-node-id="tTvzSWJ7Fe1NM1JBWFLB1X">本地保存进度，不上传任何数据</span>
+    </footer>
+  </main>
+</div>
+
+<!-- ============ 答题卡抽屉 ============ -->
+<div class="mask" id="mask" hidden data-page-node-id="sO4tWUTTm6W4gJCBIE7dEb"></div>
+<aside class="sheet" id="sheet" aria-hidden="true" data-page-node-id="lVoYdHdXE7vZx2KS7fAJoC">
+  <div class="sheet-head" data-page-node-id="1smA0IkKLfRpGJvskupFAf">
+    <div data-page-node-id="951WERRoExlSVyQUgYlrPc">
+      <h3 data-page-node-id="CTh7XtZjGxpZwSC2RTThxW">答题卡</h3>
+      <p id="sheet-sub" data-page-node-id="V05LoLeePaqqIidnG7ZMp8">共 100 题</p>
+    </div>
+    <button class="close" id="btn-close-sheet" aria-label="关闭" data-page-node-id="5HAmHL4gl1195s7p3usGvB">×</button>
+  </div>
+  <div class="legend" id="sheet-legend" data-page-node-id="Quv8wz3ZeX0MiScrljA1g2"></div>
+  <div class="grid" id="sheet-grid" data-page-node-id="hRFcBctQPf82b4LxYWHmjv"></div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite" data-page-node-id="BCASVDbHQohfkoW4WIBGKc"></div>
+
+<!-- ============ M5 模拟考试 ============ -->
+<div class="exam" id="exam" hidden>
+  <header class="exam-top">
+    <div class="exam-brand">
+      <div class="seal sm">党</div>
+      <div class="exam-brand-txt">
+        <b>模拟考试</b>
+        <em id="exam-sub">闭卷 · 满分 100 · 60 分钟</em>
+      </div>
+    </div>
+    <div class="exam-clock" id="exam-clock" hidden>
+      <span class="timer" id="exam-timer">60:00</span>
+      <div class="exam-bar"><i id="exam-bar"></i></div>
+      <span class="exam-counter" id="exam-counter">1 / 44</span>
+    </div>
+    <div class="exam-tools">
+      <button class="tool-btn" id="exam-sheet-btn" hidden>答题卡</button>
+      <button class="btn primary sm" id="exam-submit-btn" hidden>交卷</button>
+      <button class="tool-btn" id="exam-exit">退出</button>
     </div>
   </header>
 
-  <!-- 登录视图 -->
-  <section class="auth-view" id="view-auth" hidden>
-    <div class="auth-card">
-      <div class="auth-logo">
-        <svg viewBox="0 0 24 24" width="40" height="40" aria-hidden="true">
-          <path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/>
-        </svg>
+  <main class="exam-main">
+    <section id="exam-setup"></section>
+
+    <section class="exam-run" id="exam-run" hidden>
+      <div class="exam-meta">
+        <span class="tag" id="exam-section">单项选择</span>
+        <span class="exam-pos" id="exam-pos">第 1 / 30 题</span>
+        <span class="exam-points" id="exam-points">2 分</span>
       </div>
-      <h1 class="auth-title">连接你的 GitHub 账号</h1>
-      <p class="auth-desc">使用 Personal Access Token 授权，Token 仅保存在本机浏览器，不会上传到任何服务器。</p>
-
-      <div class="form-item">
-        <label for="token-input">GitHub Token</label>
-        <div class="input-group">
-          <input id="token-input" class="input" type="password" placeholder="ghp_xxx… 或 github_pat_xxx…" autocomplete="off" spellcheck="false" />
-          <button class="btn btn-ghost btn-sm" id="btn-toggle-token" type="button">显示</button>
-        </div>
+      <h2 class="stem" id="exam-stem"></h2>
+      <div class="options" id="exam-options"></div>
+      <div class="exam-short" id="exam-short" hidden>
+        <label for="exam-textarea">简要作答（可选，交卷后对照参考答案自评）</label>
+        <textarea id="exam-textarea" rows="6" placeholder="写下你的要点，不必逐字"></textarea>
       </div>
-
-      <div class="alert alert-warn" id="auth-error" hidden></div>
-
-      <button class="btn btn-primary btn-block" id="btn-login">连接 GitHub</button>
-
-      <div class="auth-help">
-        <details>
-          <summary>如何获取 Token？需要哪些权限？</summary>
-          <ol>
-            <li>打开 <a href="https://github.com/settings/tokens" target="_blank" rel="noopener">GitHub → Settings → Developer settings → Personal access tokens</a></li>
-            <li><b>Fine-grained token</b>（推荐）：Repository permissions 勾选 <code>Contents: Read and write</code>、<code>Metadata: Read-only</code>、<code>Administration: Read and write</code>（用于新建仓库）；Account permissions 勾选 <code>Administration: Read and write</code>（用于新建仓库）。</li>
-            <li><b>Classic token</b>：勾选 <code>repo</code>（完整仓库读写，含私有库）与 <code>workflow</code>（如需修改 GitHub Actions 文件）。</li>
-          </ol>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- 主视图 -->
-  <main class="main-view" id="view-main" hidden>
-    <aside class="sidebar">
-      <div class="sidebar-head">
-        <div class="search-box">
-          <input id="repo-search" class="input input-sm" placeholder="搜索仓库…" autocomplete="off" />
-        </div>
-        <div class="sidebar-actions">
-          <button class="btn btn-primary btn-sm" id="btn-new-repo">+ 新建</button>
-          <button class="btn btn-ghost btn-sm" id="btn-refresh" title="刷新仓库列表">↻</button>
-        </div>
-      </div>
-      <div class="repo-list" id="repo-list"></div>
-      <div class="sidebar-foot" id="sidebar-foot"></div>
-    </aside>
-
-    <section class="content">
-      <div class="repo-header" id="repo-header"></div>
-      <div class="meta-bar">
-        <div class="repo-stat" id="repo-stat"></div>
-        <div class="branch-bar" id="branch-bar"></div>
-      </div>
-      <nav class="tabs" id="tabs">
-        <button class="tab active" data-view="upload">⬆ 上传项目</button>
-        <button class="tab" data-view="explore">🌳 文件浏览</button>
-        <button class="tab" data-view="edit">✎ 在线编辑</button>
-        <button class="tab" data-view="history">📜 提交历史</button>
-      </nav>
-      <div class="view-area">
-        <div class="panel" id="panel-upload"></div>
-        <div class="panel" id="panel-explore" hidden></div>
-        <div class="panel" id="panel-edit" hidden></div>
-        <div class="panel" id="panel-history" hidden></div>
+      <div class="exam-nav">
+        <button class="btn ghost" id="exam-prev">← 上一题</button>
+        <button class="btn ghost" id="exam-next">下一题 →</button>
       </div>
     </section>
+
+    <section class="exam-result" id="exam-result" hidden></section>
   </main>
+</div>
 
-  <div id="modal-root"></div>
+<div class="exam-mask" id="exam-mask" hidden></div>
+<aside class="exam-sheet" id="exam-sheet" aria-hidden="true">
+  <div class="exam-sheet-head">
+    <div>
+      <h3>答题卡</h3>
+      <p id="exam-sheet-sub">共 44 题</p>
+    </div>
+    <button class="close" id="exam-sheet-close" aria-label="关闭">×</button>
+  </div>
+  <div class="exam-sheet-legend">
+    <span><i class="dot ok"></i>已答</span>
+    <span><i class="dot idle"></i>未答</span>
+    <span><i class="dot cur"></i>当前</span>
+  </div>
+  <div class="exam-sheet-grid" id="exam-sheet-grid"></div>
+  <button class="btn primary exam-sheet-submit" id="exam-sheet-submit">交卷</button>
+</aside>
 
-  <script src="js/util.js"></script>
-  <script src="js/ui.js"></script>
-  <script src="js/api.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/upload.js"></script>
-  <script src="js/explore.js"></script>
-  <script src="js/edit.js"></script>
-  <script src="js/history.js"></script>
-  <script src="js/settings.js"></script>
+<script src="assets/js/data-history.js"></script>
+<script src="assets/js/data-judge.js"></script>
+<script src="assets/js/data-short.js"></script>
+<script src="assets/js/data-current.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/exam.js"></script>
+<script>
+  if ('serviceWorker' in navigator && location.protocol === 'https:') {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('./sw.js').catch(function () {});
+    });
+  }
+</script>
 </body>
 </html>

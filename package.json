@@ -1,0 +1,13 @@
+{
+  "name": "dangshi-shuati",
+  "version": "1.0.0",
+  "private": true,
+  "description": "党史、党章、时政刷题与模拟考试（纯静态，可离线）",
+  "scripts": {
+    "test": "node tests/validate-data.js && node tests/validate-judge.js && node tests/validate-short.js && node tests/validate-current.js && node tests/core.test.js && node tests/dom.test.js && node tests/migrate.test.js && node tests/exam.test.js",
+    "serve": "python -m http.server 8080"
+  },
+  "devDependencies": {
+    "jsdom": "^30.1.3"
+  }
+}
